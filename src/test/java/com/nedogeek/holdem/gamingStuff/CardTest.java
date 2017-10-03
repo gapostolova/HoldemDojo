@@ -18,6 +18,7 @@ public class CardTest {
 
     @Test
     public void shouldHeartsAceToJSONProperlyWhenCreatingNewCard() throws Exception {
-        assertEquals("{\"cardValue\":\"A\",\"cardSuit\":\"♥\"}", new Card(CardSuit.HEARTS, CardValue.ACE).toJSON());
+//        assertEquals("{\"cardValue\":\"A\",\"cardSuit\":\"♥\"}", new Card(CardSuit.HEARTS, CardValue.ACE).toJSON());
+        assertEquals("{\"cardSuit\":\"♥\",\"cardValue\":\"A\"}", new Card(CardSuit.HEARTS, CardValue.ACE).toJSON());
     }
 }

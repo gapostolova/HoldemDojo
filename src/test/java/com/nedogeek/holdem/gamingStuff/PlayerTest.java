@@ -105,7 +105,10 @@ public class PlayerTest {
 
     @Test
     public void shouldPlayerWithCardsSerializedToJSONProperly() throws Exception {
-        assertEquals("{\"balance\":1000,\"status\":\"NotMoved\",\"name\":\"Player name\",\"pot\":0}", player.toJSON());
+//        assertEquals("{\"balance\":1000,\"status\":\"NotMoved\",\"name\":\"Player name\",\"pot\":0}", player.toJSON());
+        assertEquals("{\"pot\":0,\"balance\":1000,\"name\":\"Player name\",\"status\":\"NotMoved\"}", player.toJSON());
+
+
     }
 
     @Test
@@ -118,8 +121,9 @@ public class PlayerTest {
 
         player.setCards(new Card[]{firstCardMock, secondCardMock});
 
-        assertEquals("{\"balance\":1000,\"status\":\"NotMoved\",\"name\":\"Player name\",\"pot\":0" +
-                ",\"cards\":[\"FirstCardJSON\",\"SecondCardJSON\"]}", player.toJSONWithCards());
+//        assertEquals("{\"balance\":1000,\"status\":\"NotMoved\",\"name\":\"Player name\",\"pot\":0" +
+//                ",\"cards\":[\"FirstCardJSON\",\"SecondCardJSON\"]}", player.toJSONWithCards());
+        assertEquals("{\"cards\":[\"FirstCardJSON\",\"SecondCardJSON\"],\"pot\":0,\"balance\":1000,\"name\":\"Player name\",\"status\":\"NotMoved\"" +"}", player.toJSONWithCards());
     }
 
     @Test
